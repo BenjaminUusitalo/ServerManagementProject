@@ -6,28 +6,12 @@ In this project I will attempt to make a salt state, which I can use to install,
 
 With this, if I ever install a new machine(slave) for which I want these programs up and running, this state will do so with essentially a single command from master.
 
-## Master-Slave
-To start, Install Salt Master-Slave.
-
-For Master
-
-```
-master$ sudo apt-get update
-master$ sudo apt-get -y install salt-master
-```
-
-For Slave
-
-```
-slave$ sudo apt-get update
-slave$ sudo apt-get -y install salt-minion
-```
 
 ## Top.sls
 
-Next to create sls files for wanted programs
+First to create sls files for wanted programs
 
-On Master create a new directory for your statefile. This was for Apache, so I did /srv/salt/Apache2
+On Master create a new directory for your state file. This was for Apache, so I did /srv/salt/Apache2
 
 Within that directory create a new init.sls file.
 
