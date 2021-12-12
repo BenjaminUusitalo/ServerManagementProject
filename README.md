@@ -45,7 +45,8 @@ And finally to run on slaves:
 sudo salt '*' state.highstate
 ```
 
-Succesful
+Succesful!
+
 ![Image](./SC/4.png)
 
  
