@@ -6,7 +6,6 @@ In this project I will attempt to make a salt state, which I can use to install,
 
 With this, if I ever install a new machine for which I want these programs up and running, this state will do so with essentially a single command.
 
-## Starting out
 
 To start, Install Salt Master-Slave.
 
@@ -34,6 +33,33 @@ Inside will be the configurations, in my case this was the Apache 2 file, which 
 
 ![Image](./SC/1.png)
 
+Repeat this process for other programs, so that the directories containing sls files are all under the same directory; in my case /srv/salt
 
+For my other program I used ssh whose init.sls was the following:
+
+![Image](./SC/2.png)
+
+Naturally test your configurations are working properly, so I tested these two states locally:
+
+```
+$ sudo salt-call --local state.apply apache2
+```
+
+```
+$ sudo salt-call --local state.apply sshd
+```
+
+Next create a top.sls file in /srv/salt, mine came out like this:
+
+![Image](./SC/3.png)
+
+And finally to run on slaves: 
+
+```
+sudo salt '*' state.highstate
+```
+
+Succesful
+![Image](./SC/3.png)
 
  
