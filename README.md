@@ -21,7 +21,7 @@ Inside will be the configurations, in my case this was the Apache 2 file, which 
 
 Repeat this process for other programs, so that the directories containing sls files are all under the same directory; in my case /srv/salt
 
-For my other program I used ssh whose init.sls was the following:
+For my other program I used SSH whose init.sls was the following:
 
 ![Image](./SC/2.png)
 
@@ -46,6 +46,6 @@ sudo salt '*' state.highstate
 ```
 
 Succesful
-![Image](./SC/3.png)
+![Image](./SC/4.png)
 
  
